@@ -1,0 +1,143 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: 16px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+}
+
+.navbar__logo-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.navbar__logo-text {
+  white-space: nowrap;
+}
+
+.navbar__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+}
+
+.navbar__toggle span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transition: transform 0.2s;
+}
+
+.navbar__nav {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar__nav--open {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar__link:hover {
+  background: var(--bg-alt);
+  color: var(--primary-dark);
+}
+
+.navbar__cart {
+  position: relative;
+}
+
+.navbar__cart-icon {
+  font-size: 1.2rem;
+}
+
+.navbar__cart-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  background: var(--accent);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .navbar__nav--open {
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    border: none;
+  }
+
+  .navbar__cart-badge {
+    position: static;
+    margin-left: 4px;
+  }
+}
