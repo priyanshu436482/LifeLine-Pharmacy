@@ -93,9 +93,6 @@ export default function Cart() {
                   <span>Total</span>
                   <span>₹{cartTotal}</span>
                 </div>
-                <button type="button" className="cart-summary__checkout" disabled>
-                  Proceed to Checkout (Demo)
-                </button>
                 <Link to="/products" className="cart-summary__continue">
                   Continue Shopping
                 </Link>

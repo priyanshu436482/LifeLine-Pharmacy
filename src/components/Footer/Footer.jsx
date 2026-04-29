@@ -19,6 +19,7 @@ export default function Footer() {
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/cart">Cart</Link>
+            <Link to="/admin/login" className="admin-link">Admin Login</Link>
           </div>
           <div className="footer__links">
             <h4 className="footer__heading">Categories</h4>

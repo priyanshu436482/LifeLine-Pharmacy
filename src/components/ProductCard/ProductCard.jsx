@@ -4,16 +4,17 @@ import './ProductCard.css'
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart()
-  const { id, name, price, image, slug } = product
+  const { id, _id, name, price, image, slug } = product
+  const productId = id || _id
 
   const handleAddToCart = (e) => {
     e.preventDefault()
-    addToCart({ id, name, price, image, slug })
+    addToCart({ id: productId, name, price, image, slug })
   }
 
   return (
     <article className="product-card">
-      <Link to={`/products#${slug || id}`} className="product-card__link">
+      <Link to={`/products#${slug || productId}`} className="product-card__link">
         <div className="product-card__image-wrap">
           <img
             src={image}
